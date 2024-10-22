@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>McElroy GIS Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1>Aymber McElroy</h1>
+                    <ul>
+                        <li><a href="http://127.0.0.1:5500/home.html">Home</a></li>
+                        <li><a href="http://127.0.0.1:5500/about.html">About</a></li>
+                        <li><a href="http://127.0.0.1:5500/projects.html">Geospatial Projects</a></li>
+                        <li><a href="http://127.0.0.1:5500/resources.html">GIS Resources</a></li>
+                        <li><a href="http://127.0.0.1:5500/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>GIST Graduate Student</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/McElroyIndividual.jpg" style="width:400px;height:575px;">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am dedicated to a career preserving the landscapes and natural resources that make our diverse environments so precious. 
+                        By blending conservation and resource planning with natural science processes through the lens of GIS analysis, the real 
+                        impacts of land and water use can be determined. This data can support sustainable actions to help ensure healthy natural 
+                        resources for present and future generations to enjoy.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('awards')">Awards</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>GIS Technology</span><br>Experience with GIS technology tools and resources, including familiarity with 
+                                                          both raster and vector data models, geodatabase configuration and management, common APIs and 
+                                                          tools, ESRI software stack, QGIS and other internet based geospatial services like Mapbox and 
+                                                          OpenStreetMap</li>
+                                <li><span>Remote Sensing Technology</span><br>Experience with active and passive remote sensing datasets including radiometric and 
+                                                                geometric image preprocessing, image classification workflows including accuracy 
+                                                                assessment and change detection, and combining remotely sensed data and products with 
+                                                                other geospatial data</li>
+                                <li><span>Programming and Automation</span><br>Experience with scripting and programming languages for processing and 
+                                                                           analyzing geospatial data including Python, ArcPy, SQL, and R.</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>University of Wyoming</span><br>Master of Science: Geospatial Information Science and Technology
+                                                                      <br>Graduate Certificate in GIST
+                                                                      <br>Graduate Certificate in Remote Sensing</li>
+                                <li><span>Front Range Community College</span><br>Bachelor Certificate in Natural Resources GIS</li>
+                                <li><span>Colorado State University</span><br>Bachelor of Science: Geology</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="awards">
+                            <ul>
+                                <li><span>Women in GIS 2023 International Graduate/Post-Graduate Scholarship Award</span><br>WiGIS scholarships awards provide funds for 
+                                                                                                                          women in geospatial education</li>
+                                <li><span>CSU Geoscience Field Camp Academic Scholarship Award</span><br></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>copyright Aymber McElroy (SchoolOfComputing/WyGISC)</p>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+
+            }
+        </script>
+    </body>
+</html>

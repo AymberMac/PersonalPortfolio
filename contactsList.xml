@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+    <contacts id="101">
+        <name>John Doe</name>
+        <email>jdoe@gmail.com</email>
+        <message>You're hired!</message>
+    </contacts>
+    <contacts id="102">
+        <name>Jane Doe</name>
+        <email>janed@gmail.com</email>
+        <message>I love University of Wyoming!</message>
+    </contacts>
+    <contacts id="103">
+        <name>Johnny Doe Jr.</name>
+        <email>jr@gmail.com</email>
+        <message>Thank you!</message>
+    </contacts>
+</contacts>
